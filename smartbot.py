@@ -128,6 +128,10 @@ def chat():
         for i in data['intents']:
             if i['tag'] == tag:
                 print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL , np.random.choice(i['responses']))
+                if np.random.choice(i['responses']) == "Sure let me search on it, what is your query again?":
+                 # ddddd
+                  print("gotchaaa!")
+
 
         # print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL,random.choice(responses))
 
