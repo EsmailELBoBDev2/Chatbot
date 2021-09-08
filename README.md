@@ -3,7 +3,7 @@ A smart yet dumb personal assistant!
 
 ## FEATUERS
 
-- Timer (done)
+- Timer 
 - Todo list
 - Remember list 
 - Alarm 
@@ -14,12 +14,12 @@ A smart yet dumb personal assistant!
 
 - Emailing
 
-- Weather (done)
+- Weather
 - Traffic 
 - Directions/maps 
 - Time 
 
-- Search (done)
+- Search 
 
 - Play spotify 
 - Play radio 
