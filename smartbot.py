@@ -82,7 +82,7 @@ with open('tokenizer.pickle', 'wb') as handle:
 with open('label_encoder.pickle', 'wb') as ecn_file:
     pickle.dump(lbl_encoder, ecn_file, protocol=pickle.HIGHEST_PROTOCOL)
 
-!pip install  colorama
+!pip install  colorama  wikipedia
 
 import json 
 import numpy as np
@@ -96,8 +96,14 @@ from colorama import Fore, Style, Back
 import random
 import pickle
 
+import wikipedia
+
 with open("intents.json") as file:
     data = json.load(file)
+
+# DUMB FUNC
+def wiki(q):
+  return wikipedia.summary(q)
 
 
 def chat():
@@ -128,10 +134,10 @@ def chat():
         for i in data['intents']:
             if i['tag'] == tag:
                 print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL , np.random.choice(i['responses']))
-                if np.random.choice(i['responses']) == "Sure let me search on it, what is your query again?":
+                if np.random.choice(i['responses']) == "Sure! what is you want to search about again?":
                  # ddddd
-                  print("gotchaaa!")
-
+                 lol = input()
+                 print(wiki(lol))
 
         # print(Fore.GREEN + "ChatBot:" + Style.RESET_ALL,random.choice(responses))
 
